@@ -1,1 +1,1 @@
-# Airspace-Monitor
+Aplicativo que permite analise e consultada de dados de voo dos principais aeroportos de todo o mundo! Por ser uma aplicação de estudo, seu fonte se enquadra como código aberto porém a mesma não possui intuito comercial e nem permite o uso de terceiros para este fim. A mesma trabalha com API publicas e limitadas o seja o funcionamento pode ser prejudicado.# Airspace-Monitor.
