@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>FlightMonitor</title>
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		    <style type="text/css">
+		      /* Always set the map height explicitly to define the size of the div
+		       * element that contains the map. */
+			      #map {
+			        height: 50%;
+			        width: 50%
+			      }
+			      #Description{
+   			        height: 50%;
+				    width: 50%
+			      }
+			
+			      /* Optional: Makes the sample page fill the window. */
+			      html,body {
+			        height: 100%;
+			        margin: 0;
+			        padding: 0;
+			      }
+		    </style>
+		    <script>
+		      let map;
+		
+		      function initMap() {
+		        map = new google.maps.Map(document.getElementById("map"), {
+		          center: { lat: -34.397, lng: 150.644 },
+		          zoom: 8,
+		        });
+		      }
+		    </script>
+		
+	</head>
+	<body>	
+	<div class="gx-5">
+		<h1>Flight Monitor</h1>
+		<form action="monitorRadar" method="get">
+			<div class="col-md-6">
+			 		<div>	
+				 
+					  <label for="exampleFormControlInput1" class="form-label">Consulte um Determinado Aeroporto pelo Codigo ICAO E IATA</label>
+					 <div style="width: 100%">
+					  <div style="display: inline-block;width: 30%">
+					   	<input type="text" class="form-control"name="codigo_icao" id="input" style="width: 100%" placeholder="Insira o Codigo ICAO">
+					  </div>
+					  <div style="display: inline-block;width: 30%">
+					  	 <input type="text" class="form-control" name="codigo_iata" id="input" style="display: inline-block;" placeholder="Insira o Codigo IATA">
+					  </div>
+					  <div style="display: inline-block;width: 30%">
+					  	<input type="submit" class="btn btn-primary"  style="display: inline-block;" value="Consultar">
+					</div>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+    <div id="map"></div>
+    <div id="Description">
+    
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+	<script async
+	    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+	</script>
+	</body>
+</html>
